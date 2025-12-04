@@ -7,7 +7,7 @@ import tagger from "@dhiwise/component-tagger";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(),tagger()],
-  base: process.env.VITE_BASE_PATH || '/panaweb',
+  base: process.env.VITE_BASE_PATH || '/panasiaticweb',
   build: {
     outDir: "dist",
   },
