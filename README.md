@@ -1,4 +1,4 @@
-# React + Vite + Tailwind CSS Project
+# Panasiatic Solutions Website React + Vite + Tailwind CSS Project
 
 A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
 
@@ -26,7 +26,7 @@ A modern React-based project utilizing the latest frontend technologies and tool
 
 2. Start the server:
   ```bash
-  npm run start
+  npm start
   # or
   yarn start
   ```
@@ -91,12 +91,14 @@ Build the application for production:
 
 ```bash
 npm run build
+or
+vite build
 ```
 
 ## 🙏 Acknowledgments
 
-- Built with [Rocket.new](https://rocket.new)
+- Built with [Joshcolored]
 - Powered by React and Vite
 - Styled with Tailwind CSS
 
-Built with ❤️ on Rocket.new
+Built with ❤️.
