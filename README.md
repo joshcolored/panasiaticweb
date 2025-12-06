@@ -1,6 +1,9 @@
 # Panasiatic Solutions Website React + Vite + Tailwind CSS Project
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+A modern React-based project utilizing the latest frontend technologies and tools for building respnsive web applications.
+
+<img width="157" height="50" alt="image_logo" src="https://github.com/user-attachments/assets/5e95a646-a515-4afd-bb5b-6503ddcd7356" />
+
 
 ## 🚀 Features
 
