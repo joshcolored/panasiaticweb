@@ -2,7 +2,7 @@
 
 A modern React-based project utilizing the latest frontend technologies and tools for building respnsive web applications.
 
-<img width="923" height="260" alt="image_logo2" src="https://github.com/user-attachments/assets/c730b807-2eb3-48e2-864c-e52f79d1b9a4" />
+<img width="157" height="50" alt="image_logo2" src="https://github.com/user-attachments/assets/c730b807-2eb3-48e2-864c-e52f79d1b9a4" />
 
 
 ## 🚀 Features
