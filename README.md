@@ -97,7 +97,7 @@ vite build
 
 ## 🙏 Acknowledgments
 
-- Built with [Joshcolored]
+- Built with [Joshcolored](https://joshcodes.vercel.app)
 - Powered by React and Vite
 - Styled with Tailwind CSS
 
