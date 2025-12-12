@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 import Logo from "../ui/Logo";
 
 const menuItems = [
-  { label: "Home", path: "/" },
+  { label: "Home", path: "/home" },
   { label: "Services", path: "/services" },
   { label: "Why us", path: "/why-us" },
   { label: "Industries", path: "/industries" },

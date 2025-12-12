@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const PortalAccess = () => {
   return (
@@ -32,7 +33,8 @@ const PortalAccess = () => {
               <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-[208px] justify-center items-stretch max-w-[1024px] mx-auto">
                 
                 {/* Clients Card */}
-                
+                <Link to = "/home">
+                  
                 <div className="w-full lg:w-[408px] bg-secondary-light border-[3px] border-solid border-primary-background rounded-sm p-6 sm:p-8 lg:p-12 shadow-[0px_4px_4px_#00000026] flex flex-col">
                   
                   {/* Client Icon */}
@@ -45,6 +47,8 @@ const PortalAccess = () => {
                   </div>
 
                   {/* Client Content */}
+                  
+                  
                   <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
                     <h2 className="text-[20px] sm:text-[26px] lg:text-3xl font-normal leading-[24px] sm:leading-[31px] lg:leading-[38px] text-left text-primary font-['Raleway']">
                       Clients
@@ -54,30 +58,33 @@ const PortalAccess = () => {
                     </p>
                   </div>
                 </div>
-
+            </Link>
                 {/* Employees Card */}
-                <div className="w-full lg:w-[408px] bg-secondary-light border-[3px] border-solid border-primary-background rounded-sm p-6 sm:p-8 lg:p-12 shadow-[0px_4px_4px_#00000026] flex flex-col">
-                  
-                  {/* Employee Icon */}
-                  <div className="mb-6 sm:mb-8 lg:mb-[82px]">
-                    <img 
-                      src="/images/img_search.svg" 
-                      alt="Employee Resources" 
-                      className="w-[36px] h-[36px] sm:w-[54px] sm:h-[54px] lg:w-[72px] lg:h-[72px]" 
-                    />
-                  </div>
+                <a href="https://www.panasiaticcallcenters.com/portal/" target="_blank" 
+                       rel="noopener noreferrer" className="block">
 
-                  {/* Employee Content */}
-                  <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
-                    <h2 className="text-[20px] sm:text-[26px] lg:text-3xl font-normal leading-[24px] sm:leading-[31px] lg:leading-[38px] text-left text-primary font-['Raleway']">
-                      Employees
-                    </h2>
-                    <p className="text-[14px] sm:text-[18px] lg:text-[22px] font-normal leading-[20px] sm:leading-[26px] lg:leading-[32px] text-left text-accent-gray font-['Microsoft_Sans_Serif']">
-                      Access your ressources, tools and updates
-                    </p>
-                  </div>
-                </div>
+                  <div className="w-full lg:w-[408px] bg-secondary-light border-[3px] border-solid border-primary-background rounded-sm p-6 sm:p-8 lg:p-12 shadow-[0px_4px_4px_#00000026] flex flex-col">
+                    
+                    {/* Employee Icon */}
+                    <div className="mb-6 sm:mb-8 lg:mb-[82px]">
+                      <img 
+                        src="/images/img_search.svg" 
+                        alt="Employee Resources" 
+                        className="w-[36px] h-[36px] sm:w-[54px] sm:h-[54px] lg:w-[72px] lg:h-[72px]" 
+                      />
+                    </div>
 
+                    {/* Employee Content */}
+                    <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
+                      <h2 className="text-[20px] sm:text-[26px] lg:text-3xl font-normal leading-[24px] sm:leading-[31px] lg:leading-[38px] text-left text-primary font-['Raleway']">
+                        Employees
+                      </h2>
+                      <p className="text-[14px] sm:text-[18px] lg:text-[22px] font-normal leading-[20px] sm:leading-[26px] lg:leading-[32px] text-left text-accent-gray font-['Microsoft_Sans_Serif']">
+                        Access your ressources, tools and updates
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
 

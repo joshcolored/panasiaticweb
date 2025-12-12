@@ -8,11 +8,11 @@ const faqs = [
   },
   {
    question: "What makes PanAsiatic different form other BPOs?",
-   answer: "Your answer here...",
+   answer: "We combine human empathy with AI-readiness, enterprise-grade security, and 15+ years of proven results for global brands.",
   },
   {
     question: "Who are your clients?",
-    answer: "Your answer here...",
+    answer: "We’ve been a trusted partner to a Fortune 500 company since 2010, serving all 10 of their brands.",
   }
 ];
 

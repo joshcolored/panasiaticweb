@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-// Import page components
 import Homepage from './pages/Homepage';
 import PortalAccess from './pages/PortalAccess';
 import Services from './pages/Services';
@@ -14,19 +13,18 @@ import Contact from './pages/Contact';
 
 const AppRoutes = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/portal" element={<PortalAccess />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/why-us" element={<WhyUs />} />
-        <Route path="/industries" element={<Industries />} />
-        <Route path="/partnerships" element={<Partnerships />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<PortalAccess />} />
+      <Route path="/home" element={<Homepage />} />
+      <Route path="/portal" element={<PortalAccess />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/why-us" element={<WhyUs />} />
+      <Route path="/industries" element={<Industries />} />
+      <Route path="/partnerships" element={<Partnerships />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 };
 

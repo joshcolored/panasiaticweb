@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import Header from '../../components/common/Header';
 import Footer from '../../components/common/Footer';
 import HeroSection from './HeroSection';
@@ -15,10 +15,10 @@ const WhyUs = () => {
   return (
     <>
       <Helmet>
-        <title>PanAsiatic Solutions | Human-Driven AI-Ready Customer Support Outsourcing Philippines</title>
-        <meta name="description" content="PanAsiatic Solutions delivers exceptional customer support outsourcing from the Philippines with 4500+ agents. Human-driven, AI-ready services including voice support, omnichannel CX, and enterprise-grade security since 2010." />
-        <meta property="og:title" content="PanAsiatic Solutions | Human-Driven AI-Ready Customer Support Outsourcing Philippines" />
-        <meta property="og:description" content="PanAsiatic Solutions delivers exceptional customer support outsourcing from the Philippines with 4500+ agents. Human-driven, AI-ready services including voice support, omnichannel CX, and enterprise-grade security since 2010." />
+        <title>Why Choose PanAsiatic | Proven Outsourcing Partner</title>
+        <meta name="description" content="Trusted by Fortune 500 brands since 2010, PanAsiatic combines quality, security, scalability, and cost efficiency." />
+        <meta property="og:title" content="Why Choose PanAsiatic | Proven Outsourcing Partner" />
+        <meta property="og:description" content="Trusted by Fortune 500 brands since 2010, PanAsiatic combines quality, security, scalability, and cost efficiency." />
       </Helmet>
 
       <main className="w-full bg-secondary-background">

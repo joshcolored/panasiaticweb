@@ -9,27 +9,27 @@ const faqs = [
   },
   {
     question: "Which channels are included in your omnichannel support?",
-    answer: "Your answer here...",
+    answer: "Voice, SMS, email, live chat, and web chatbots with seamless channel switching. Out teams operate 24/7 to ensure fast resolution and consistent customer experience.",
   },
   {
     question: "How do AI add-ons improve customer experience?",
-    answer: "Your answer here...",
+    answer: "Tools for sentiment analysis, workflow automation, and customer authentication optimize efficiency and insights.",
   },
   {
     question: "Can AI tools run on our own infrastructure?",
-    answer: "Your answer here...",
+    answer: "Yes, our solutions are deployable on our private cloud or on your infrastructure. Our AI tools are optional add-ons, deployed at your pace and terms.",
   },
   {
     question: "What certifications does PanAsiatic hold?",
-    answer: "Your answer here...",
+    answer: "ISO 27001, PCI-DSS 4.0, SOC 2 and BCMS certified, with 24/7 monitoring and secure facilities.",
   },
   {
     question: "Do you allow remote operations?",
-    answer: "Your answer here...",
+    answer: "No, all operations are 100% facility-based to ensure maximum data protection.",
   },
   {
     question: "How do you ensure business continuity?",
-    answer: "Your answer here...",
+    answer: "Redundant power, data systems, and 24/7 physical/digital monitoring.",
   },
 ];
 

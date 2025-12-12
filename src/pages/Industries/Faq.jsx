@@ -9,31 +9,31 @@ const faqs = [
   },
   {
     question: "Why do telecom companies trust PanAsiatic?",
-    answer: "Your answer here...",
+    answer: "Because of proven reliability, industry-leading CSAT scores, and long-term partnerships.",
   },
   {
     question: "How do you support online retailers?",
-    answer: "Your answer here...",
+    answer: "Handling order tracking, returns, product/payment inquiries, and flash sale support. Our model also flexes with sales cycles and promotional bursts, so we can easily and efficiently handle sales peaks.",
   },
   {
     question: "What channels do you use for e-commerce support?",
-    answer: "Your answer here...",
+    answer: "Chat, email, SMS, and voice to ensure rapid resolution.",
   },
   {
     question: "What travel-related services do you provide?",
-    answer: "Your answer here...",
+    answer: "Reservations, rebookings, refunds, cancellations, loyalty programs, and crisis response.",
   },
   {
     question: "Do you support time-sensitive customer inquiries?",
-    answer: "Your answer here...",
+    answer: "Yes, our teams deliver fast, empathetic responses for high-volume cases.",
   },
   {
     question: "Do you provide healthcare customer support?",
-    answer: "Your answer here...",
+    answer: "Yes. We handle patient onboarding, appointment scheduling, telehealth navigation, and medication reminders.",
   },
   {
     question: "Are you HIPAA-certified?",
-    answer: "Your answer here...",
+    answer: "Not HIPAA-covered, but aligned with best practices and able to support HIPAA-adjacent protocols.",
   },
 
 ];

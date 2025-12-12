@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     question: "How quickly can you onboard new clients?",
-    answer: "Your answer here...",
+    answer: "Our onboarding is designed to get you live fast, with tailored programs and custom KPIs. ",
   },
   {
     question: "What makes your pricing model competitive?",
-    answer: "Your answer here...",
+    answer: "Transparent pricing, no hidden fees, and among the most cost-effective call centers in the Philippines.",
   }
 ];
 
