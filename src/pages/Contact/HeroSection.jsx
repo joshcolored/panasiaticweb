@@ -26,28 +26,37 @@ const HeroSection = () => {
 
     
 
-    try {
+try {
   const formData = new FormData();
   formData.append("name", `${form.firstName} ${form.lastName}`);
   formData.append("email", form.email);
   formData.append("phone", phone);
   formData.append("message", form.message);
+  
+const res = await fetch("https://www.panasiaticsolutions.com/contact-send.php", {
+  method: "POST",
+  body: formData,
+});
 
-  const res = await fetch("https://www.panasiaticsolutions.com/contact-send.php", {
-    method: "POST",
-    body: formData, // NO headers
-  });
+const text = await res.text(); // <-- READ RAW RESPONSE FIRST
 
-  const data = await res.json();
+let data;
+try {
+  data = JSON.parse(text);
+} catch (e) {
+  console.error("Invalid JSON response:", text);
+  throw new Error("Server returned invalid response");
+}
 
-'cpgx ittn qdal gunr'
-  if (data.success) {
-    setStatus("Message sent successfully!");
-    setForm({ firstName: "", lastName: "", email: "", message: "" });
-    setPhone("");
-  } else {
-    setStatus(data.error || "Failed to send message.");
-  }
+if (data.success) {
+  setStatus("Message sent successfully!");
+  setForm({ firstName: "", lastName: "", email: "", message: "" });
+  setPhone("");
+} else {
+  setStatus(data.error || "Failed to send message.");
+}
+
+ 
 } catch (err) {
   console.error(err);
   setStatus("Server error. Please try again.");
