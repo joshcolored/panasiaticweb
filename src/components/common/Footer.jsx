@@ -14,7 +14,7 @@ const Footer = ({ className, ...props }) => {
           {/* Top Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-8 lg:gap-0">
             {/* Logo and Description */}
-            <div className="flex flex-col gap-6 lg:gap-[26px] w-full lg:w-1/5">
+            <div className="flex flex-col gap- lg:gap-[26px] w-full lg:w-1/5">
               <Link to="/">
                 <Logo
                   src="/images/image_logo2.png"
@@ -168,7 +168,7 @@ const Footer = ({ className, ...props }) => {
                   alt="Email"
                   className="w-6 h-6 flex-shrink-0"
                 />
-                <a href="mailto:yourname@gmail.com?subject=Inquiry&body=Hello"
+                <a href="mailto:generalmanager@panasiaticcallcenters.com?subject=Inquiry&body="
                   className="text-base font-normal leading-sm text-text-white-muted"
                   style={{ fontFamily: "Raleway" }}
                 >
