@@ -14,7 +14,7 @@ const Footer = ({ className, ...props }) => {
           {/* Top Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-8 lg:gap-0">
             {/* Logo and Description */}
-            <div className="flex flex-col gap-6 lg:gap-[26px] w-full lg:w-1/5">
+            <div className="flex flex-col gap- lg:gap-[26px] w-full lg:w-1/5">
               <Link to="/">
                 <Logo
                   src="/images/image_logo2.png"
@@ -137,13 +137,15 @@ const Footer = ({ className, ...props }) => {
                   alt="Location"
                   className="w-6 h-6 flex-shrink-0"
                 />
-                <span
+                <a  href="https://www.google.com/maps/place/MX68%2BJJR+Panasiatic+Call+Centers,+74+Circumferential+Rd,+Bacolod,+6100+Negros+Occidental/@10.6614793,122.964176,753m/data=!3m2!1e3!4b1!4m6!3m5!1s0x33aed1957cc8f987:0xa788a04ac8c8ece4!8m2!3d10.6614793!4d122.9667509!16s%2Fg%2F1vbnly72?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D"
                   className="text-base font-normal leading-sm text-text-white-muted"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ fontFamily: "Raleway" }}
                 >
                   PanAsiatic Solutions Building, C. Hilado Circumferencial Road,
                   Bacolod City, Philippines
-                </span>
+                </a>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center">
@@ -152,12 +154,12 @@ const Footer = ({ className, ...props }) => {
                   alt="Phone"
                   className="w-6 h-6 flex-shrink-0"
                 />
-                <span
+                <a href="tel:+63347055800"
                   className="text-base font-normal leading-sm text-text-white-muted"
                   style={{ fontFamily: "Raleway" }}
                 >
                   +63 34 705 5800
-                </span>
+                </a>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 items-start sm:items-center">
@@ -166,12 +168,12 @@ const Footer = ({ className, ...props }) => {
                   alt="Email"
                   className="w-6 h-6 flex-shrink-0"
                 />
-                <span
+                <a href="mailto:generalmanager@panasiaticcallcenters.com?subject=Inquiry&body="
                   className="text-base font-normal leading-sm text-text-white-muted"
                   style={{ fontFamily: "Raleway" }}
                 >
                   generalmanager@panasiaticcallcenters.com
-                </span>
+                </a>
               </div>
             </div>
           </div>

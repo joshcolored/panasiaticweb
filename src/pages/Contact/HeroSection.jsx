@@ -3,12 +3,63 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
 const HeroSection = () => {
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus("");
+
+
+    
+
+    try {
+  const formData = new FormData();
+  formData.append("name", `${form.firstName} ${form.lastName}`);
+  formData.append("email", form.email);
+  formData.append("phone", phone);
+  formData.append("message", form.message);
+
+  const res = await fetch("https://www.panasiaticsolutions.com/contact-send.php", {
+    method: "POST",
+    body: formData, // NO headers
+  });
+
+  const data = await res.json();
+
+'cpgx ittn qdal gunr'
+  if (data.success) {
+    setStatus("Message sent successfully!");
+    setForm({ firstName: "", lastName: "", email: "", message: "" });
+    setPhone("");
+  } else {
+    setStatus(data.error || "Failed to send message.");
+  }
+} catch (err) {
+  console.error(err);
+  setStatus("Server error. Please try again.");
+}
+
+setLoading(false);
+
+  };
 
   return (
     <div className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        {/* Left Column - Text + Form */}
         <div className="space-y-10">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -21,27 +72,37 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <form className="space-y-8">
-            {/* Name Row */}
+          <form className="space-y-8" onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-6">
               <input
                 type="text"
+                name="firstName"
                 placeholder="First name"
-                className="w-full px-5 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#49ade8] focus:border-transparent transition"
+                value={form.firstName}
+                onChange={handleChange}
+                required
+                className="w-full px-5 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#49ade8]"
               />
               <input
                 type="text"
+                name="lastName"
                 placeholder="Last name"
-                className="w-full px-5 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#49ade8] focus:border-transparent transition"
+                value={form.lastName}
+                onChange={handleChange}
+                required
+                className="w-full px-5 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#49ade8]"
               />
             </div>
 
-            {/* Email & Phone Row */}
             <div className="grid grid-cols-2 gap-6">
               <input
                 type="email"
+                name="email"
                 placeholder="you@company.com"
-                className="w-full px-5 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#49ade8] focus:border-transparent transition"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="w-full px-5 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#49ade8]"
               />
 
               <PhoneInput
@@ -50,12 +111,12 @@ const HeroSection = () => {
                 onChange={setPhone}
                 inputStyle={{
                   width: "100%",
-                  height: "56px", // same as other inputs
-                  borderRadius: "0.75rem", // rounded-xl
-                  paddingLeft: "60px", // space for flag
-                  border: "1px solid #E5E7EB", // gray-200
+                  height: "56px",
+                  borderRadius: "0.75rem",
+                  paddingLeft: "60px",
+                  border: "1px solid #E5E7EB",
                   fontSize: "1rem",
-                  color: "#111827", // text-gray-900
+                  color: "#111827",
                 }}
                 buttonStyle={{
                   border: "1px solid #E5E7EB",
@@ -72,24 +133,32 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* Message */}
             <textarea
               rows={5}
+              name="message"
               placeholder="How can we help you?"
-              className="w-full px-5 py-4 border border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-[#49ade8] focus:border-transparent transition"
+              value={form.message}
+              onChange={handleChange}
+              required
+              className="w-full px-5 py-4 border border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-[#49ade8]"
             />
 
-            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#49ade8] hover:bg-[#3a8ad1] text-white font-medium py-5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              disabled={loading}
+              className="w-full bg-[#49ade8] hover:bg-[#3a8ad1] text-white font-medium py-5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg"
             >
-              Send message
+              {loading ? "Sending..." : "Send message"}
             </button>
+
+            {status && (
+              <p className="text-center text-sm text-gray-600 mt-2">
+                {status}
+              </p>
+            )}
           </form>
         </div>
 
-        {/* Right Column - Image */}
         <div className="hidden lg:block">
           <img
             src="/images/contactImg.png"
