@@ -35,7 +35,7 @@ try {
   formData.append("phone", phone);
   formData.append("message", form.message);
   
-const res = await fetch("https://www.panasiaticsolutions.com/contact-send.php", {
+const res = await fetch("https://www.panasiaticcallcenters.com/payslip/contact-send.php", {
   method: "POST",
   body: formData,
 });
