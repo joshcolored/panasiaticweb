@@ -9,6 +9,8 @@ const HeroSection = () => {
     email: "",
     message: "",
   });
+  const [showModal, setShowModal] = useState(false);
+
 
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
@@ -52,6 +54,8 @@ if (data.success) {
   setStatus("Message sent successfully!");
   setForm({ firstName: "", lastName: "", email: "", message: "" });
   setPhone("");
+  setShowModal(true);
+  setTimeout(() => setShowModal(false), 3000);
 } else {
   setStatus(data.error || "Failed to send message.");
 }
@@ -165,6 +169,25 @@ setLoading(false);
                 {status}
               </p>
             )}
+            {showModal && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="bg-white rounded-2xl p-8 max-w-sm w-full shadow-xl text-center">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                    Message Sent 🎉
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Thank you for contacting PanAsiatic. Our team will get back to you shortly.
+                  </p>
+                  <button
+                    onClick={() => setShowModal(false)}
+                    className="bg-[#49ade8] hover:bg-[#3a8ad1] text-white px-6 py-3 rounded-full transition"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+
           </form>
         </div>
 

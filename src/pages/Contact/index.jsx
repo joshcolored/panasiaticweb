@@ -18,7 +18,7 @@ const Contact = () => {
         <Header />
         <HeroSection />
         <Footer />  
-      </main>
+      </main>S
     </>
   );
 };
