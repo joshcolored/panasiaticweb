@@ -26,6 +26,12 @@ const FastFactsSection = () => {
       width: "148px",
       height: "120px",
     },
+      {
+      icon: "/images/CORSeal.png",
+      title: "DPO/DPS 2026 Certified",
+      width: "156px",
+      height: "120px",
+    },
   ];
 
   return (
@@ -40,7 +46,7 @@ const FastFactsSection = () => {
               Fast Facts
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-[134px] w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 lg:gap-[134px] w-full">
               {facts?.map((fact, index) => (
                 <div
                   key={index}
@@ -50,7 +56,11 @@ const FastFactsSection = () => {
                     <img
                       src={fact?.icon}
                       alt={`Fact ${index + 1}`}
-                      className={`w-[${fact?.width}] h-[${fact?.height}] object-contain`}
+                      className={` object-contain`}
+                       style={{
+                          width: fact?.width,
+                          height: fact?.height
+                        }}
                     />
                   </div>
                   <p
