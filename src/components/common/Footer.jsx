@@ -10,9 +10,10 @@ const Footer = ({ className, ...props }) => {
       {...props}
     >
       <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20 mt-[18px]">
-        <div className="flex flex-col w-full gap-8">
+        <div className="flex flex-col w-full gap-8 ">
           {/* Top Section */}
-          <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-8 lg:gap-0">
+          <div className="flex flex-col lg:flex-row items-start w-full gap-8 lg:gap-16">
+
             {/* Logo and Description */}
             <div className="flex flex-col gap- lg:gap-[26px] w-full lg:w-1/5">
               <Link to="/">
@@ -33,7 +34,8 @@ const Footer = ({ className, ...props }) => {
             </div>
 
             {/* Services and Industries */}
-            <div className="flex flex-col sm:flex-row justify-between items-start w-full lg:w-auto gap-8 sm:gap-12 lg:gap-[67px] mt-4 sm:mt-0">
+            <div className="flex flex-col lg:flex-row items-start w-full lg:w-auto gap-8 lg:gap-12">
+
               {/* Services */}
               <div className="flex flex-col gap-3 sm:gap-5 w-full sm:w-auto">
                 <h3
